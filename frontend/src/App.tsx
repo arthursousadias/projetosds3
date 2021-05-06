@@ -4,7 +4,6 @@ import DonutChart from 'componentes/donutchart';
 import Footer from 'componentes/footer';
 import NavBar from 'componentes/navbar/index';
 
-
 function App() {
   return (
     <>
