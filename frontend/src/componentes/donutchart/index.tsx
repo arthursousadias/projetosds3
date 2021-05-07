@@ -11,7 +11,6 @@ type ChartData = {
 
 function DonutChart() {
     const [chartData, setCharData] = useState<ChartData>({ labels: [], series: [] });
-
     useEffect( 
         () => {
               axios.get(`${BASE_URL}/sales/amount-by-seller`)
@@ -23,9 +22,6 @@ function DonutChart() {
         });
     }, []);
     
-
-   
-
     const options = {
         legend: {
             show: true
