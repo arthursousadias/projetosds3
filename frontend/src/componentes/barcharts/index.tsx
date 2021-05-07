@@ -5,7 +5,6 @@ import { SaleSucess } from 'types/sale';
 import { round } from 'util/format';
 import { BASE_URL } from 'util/Requests';
 
-
 type SeriesData ={
     name: string;
     data: number[];
@@ -19,7 +18,6 @@ type CharData = {
 
 }
 
-
 function BarChart() {    
     const [charData, setCharData] = useState<CharData>({
         labels: {
@@ -32,8 +30,7 @@ function BarChart() {
             }
         ]    
     });
-    
-    
+        
     useEffect( 
         () => {
               axios.get(`${BASE_URL}/sales/success-by-seller`)
@@ -63,8 +60,7 @@ function BarChart() {
             }
         },
     };
-    
-    
+       
     return (        
           <Chart 
              options={{...options, xaxis: charData.labels}}
